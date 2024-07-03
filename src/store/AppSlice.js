@@ -5,7 +5,7 @@ export const fetchUsers = createAsyncThunk("users/fetchUsers", async () => {
 		`https://602e7c2c4410730017c50b9d.mockapi.io/users`
 	);
 	const data = await response.json();
-	console.log(data);
+	// console.log(data);
 	return data;
 });
 
@@ -13,16 +13,13 @@ const initialState = {
 	users: [],
 	loading: false,
 	error: null,
-	curUser: {},
+	curUser: null,
 };
 
 const userSlice = createSlice({
-	name: "user",
+	name: "users",
 	initialState,
 	reducers: {
-		setData(state, action) {
-			state.users = action.payload;
-		},
 		setCurrentUser(state, action) {
 			state.curUser = action.payload;
 		},
@@ -44,4 +41,4 @@ const userSlice = createSlice({
 });
 
 export default userSlice.reducer;
-export const { setData, setCurrentUser } = userSlice.actions;
+export const { setCurrentUser } = userSlice.actions;
