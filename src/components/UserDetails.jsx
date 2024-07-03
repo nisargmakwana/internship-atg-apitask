@@ -26,7 +26,7 @@ function UserDetails() {
 	return (
 		<div
 			className={`${roboto.className} bg-slate-600 my-[5rem] mx-[5rem] rounded-[0.8rem]`}>
-			<div className="max-w-[40rem]bg-slate-300 mx-auto my-[10rem] rounded-[0.6rem] flex flex-col">
+			<div className="max-w-[40rem] bg-slate-300 mx-auto my-[10rem] rounded-[0.6rem] flex flex-col">
 				<div className="flex flex-col p-[4rem]">
 					{/* <img
 						src={curUser.avatar}
